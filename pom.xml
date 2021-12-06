@@ -15,7 +15,6 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
-        <springframework-kafka-version>2.7.6</springframework-kafka-version>
     </properties>
     <dependencies>
         <dependency>
@@ -26,7 +25,6 @@
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
-            <version>${springframework-kafka-version}</version>
             <!-- Spring version/dependencies should be defined by spring-boot-starters only -->
             <exclusions>
                 <exclusion>
@@ -38,8 +36,6 @@
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
-            <version>${springframework-kafka-version}</version>
         </dependency>
     </dependencies>
-
 </project>
