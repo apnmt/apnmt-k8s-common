@@ -20,10 +20,10 @@ public class KafkaConsumerConfiguration {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    @Value("spring.kafka.consumer.group-id")
+    @Value("${spring.kafka.consumer.group-id}")
     private String groupId;
 
-    @Value("spring.kafka.consumer.auto-startup")
+    @Value("${spring.kafka.consumer.auto-startup}")
     private boolean autoStartup;
 
     private Map<String, Object> consumerConfigs() {
