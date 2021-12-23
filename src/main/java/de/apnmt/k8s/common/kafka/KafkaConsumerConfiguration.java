@@ -23,6 +23,9 @@ public class KafkaConsumerConfiguration {
     @Value("spring.kafka.consumer.group-id")
     private String groupId;
 
+    @Value("spring.kafka.consumer.auto-startup")
+    private boolean autoStartup;
+
     private Map<String, Object> consumerConfigs() {
         final Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, this.bootstrapServers);
@@ -43,6 +46,7 @@ public class KafkaConsumerConfiguration {
     public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(this.consumerFactory());
+        factory.setAutoStartup(autoStartup);
         return factory;
     }
 
