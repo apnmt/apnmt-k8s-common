@@ -12,7 +12,7 @@
     <artifactId>apnmt-k8s-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>apnmt-k8s-common</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Common for K8s</description>
     <properties>
         <java.version>11</java.version>
     </properties>
