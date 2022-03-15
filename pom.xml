@@ -51,5 +51,10 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.zipkin.contrib.brave</groupId>
+            <artifactId>brave-kafka-interceptor</artifactId>
+            <version>0.5.5</version>
+        </dependency>
     </dependencies>
 </project>
