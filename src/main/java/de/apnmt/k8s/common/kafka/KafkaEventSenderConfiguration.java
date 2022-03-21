@@ -38,7 +38,7 @@ public class KafkaEventSenderConfiguration {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
 
         if (zipkinEnabled) {
-            props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, TracingProducerInterceptor.class);
+            props.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, TracingProducerInterceptor.class.getName());
             props.put("zipkin.http.endpoint", zipkinBaseUrl + "/api/v2/spans");
             props.put("zipkin.sender.type", "HTTP");
             props.put("zipkin.encoding", "JSON");

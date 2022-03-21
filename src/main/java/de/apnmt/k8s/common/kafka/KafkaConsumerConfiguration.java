@@ -43,7 +43,7 @@ public class KafkaConsumerConfiguration {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 
         if (zipkinEnabled) {
-            props.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, TracingConsumerInterceptor.class);
+            props.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, TracingConsumerInterceptor.class.getName());
             props.put("zipkin.http.endpoint", zipkinBaseUrl + "/api/v2/spans");
             props.put("zipkin.sender.type", "HTTP");
             props.put("zipkin.encoding", "JSON");
